@@ -1,0 +1,351 @@
+<?php require('connection.php');?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom T-Shirt Store</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/menu.css">
+    <style>
+    body {
+        background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(7, 7, 28, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .fixed-header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+    }
+
+    .fixed-header h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .navbar {
+        background-color: #0000ff;
+         overflow: hidden;
+        top: 0px;
+        left: 0;
+        right: 100;
+        z-index: 99;
+    }
+
+    .navbar a {
+        float: left;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navbar a:hover {
+          background-color: #007B9A;
+    	  color: ##6666ff;
+    	  transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 17px;
+        border: none;
+        outline: none;
+        color: #fff;
+        padding: 10px 16px;
+        background-color: inherit;
+        font-family: inherit;
+    }
+	.dropdown:hover .dropbtn {
+         background-color: #007B9A;
+         color: #fff;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration:none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+	.dropdown-content a:hover {
+    background-color: #66ff99;
+    color: #6666ff;
+}
+
+
+    h2 {
+        margin-top: 100px;
+        color: #00ffcc;
+    }
+
+    .btn {
+        background-color: #008CBA;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 50%;
+    }
+
+    .btn:hover {
+        background-color: #007B9A;
+        transform: scale(1.1);
+    }
+
+    .btn:active {
+        background-color: #444;
+    }
+
+    .carousel {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        margin-top: 150px;
+        position: relative;
+    }
+
+    .carousel img {
+        width: 400px;
+        height: 400px;
+        padding: 10px;
+        animation: scroller 20s infinite linear;
+    }
+
+    @keyframes scroller {
+        0%, 100% {
+            transform: translateX(0);
+        }
+
+        8.33% {
+            transform: translateX(-100%);
+        }
+
+        16.66% {
+            transform: translateX(-200%);
+        }
+
+        25% {
+            transform: translateX(-300%);
+        }
+
+        33.33% {
+            transform: translateX(-400%);
+        }
+
+        41.66% {
+            transform: translateX(-500%);
+        }
+
+        50% {
+            transform: translateX(-600%);
+        }
+
+        58.33% {
+            transform: translateX(-700%);
+        }
+
+        66.66% {
+            transform: translateX(-800%);
+        }
+
+        75% {
+            transform: translateX(-900%);
+        }
+
+        83.33% {
+            transform: translateX(-1000%);
+        }
+
+        91.66% {
+            transform: translateX(-1100%);
+        }
+    }
+
+    .btn-container {
+        background: linear-gradient(to right, #FFC300, #FF5733);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .step {
+        background-color: #e6e6e6;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    .step:hover {
+        transform: scale(1.1);
+        background-color: #33cccc;
+    }
+
+    .step img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        vertical-align: middle;
+        transition: 0.3s;
+    }
+
+    .step p {
+        transition: 0.3s;
+    }
+
+    .step:hover img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .step:hover p {
+        font-size: 48px;
+    }
+
+    .about-us {
+        background-color:#dfff80;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    /* Added spacing for fixed header and menu */
+    .spacer {
+        height: 12px;
+    }
+   .blank-header {
+    height: 55px; /* Adjust the height as needed */
+}
+</style>
+</head>
+
+<body>
+    <div class="fixed-header">
+        <h1><marquee><img src="image/p6.jpg" width="50" height="33" border=2><strong>Welcome to our Online Printed T-Shirt Designing Project Chad</strong></marquee></h1>
+    </div>
+    <div class="spacer"></div>
+	 <div class="blank-header">
+</div>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Portal
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="register_form.php">User Registration</a>
+                <a href="admin_login.php">Admin Registration</a>
+                <a href="login.php">Member Login</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Curious
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#how-it-works">How It Works</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">About Us
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#about-us">About Us</a>
+            </div>
+        </div>
+    </div>
+   
+
+
+
+    <h2>Please log in or register to continue</h2>
+    <div class="btn-container">
+        <button class="btn" onclick="location.href='admin_login.php'">Admin Login</button>
+        <button class="btn" onclick="location.href='login.php'">Member Login</button>
+        <button class="btn" onclick="location.href='register_form.php'">New User Registration</button>
+    </div>
+    <div class="carousel">
+        <img src="image/p1.jpg" alt="Image 1">
+        <img src="image/p2.jpg" alt="Image 2">
+        <img src="image/p3.jpg" alt="Image 3">
+        <img src="image/p4.jpg" alt="Image 4">
+        <img src="image/p5.jpg" alt="Image 5">
+        <img src="image/p6.jpg" alt="Image 6">
+        <img src="image/p7.jpg" alt="Image 7">
+        <img src="image/p8.jpg" alt="Image 8">
+        <img src="image/p9.jpg" alt="Image 9">
+        <img src="image/p10.jpg" alt="Image 10">
+        <img src="image/p11.jpg" alt="Image 11">
+    </div>
+    <section id="how-it-works">
+        <h2>How it works:</h2>
+        <div class="step"> <img src="image/pp1.jpg" alt="Step 1">
+            <p style="background-color: #FF5733;">1. CHOOSE A T-SHIRT DESIGN </p>
+        </div>
+        <div class="step"> <img src="image/pp2.jpg" alt="Step 2">
+            <p style="background-color: #FFC300;">2. CHOOSE YOUR DESIRE COLOR </p>
+        </div>
+        <div class="step"> <img src="image/pp5.jpg" alt="Step 3">
+            <p style="background-color: #FF5733;">3. CHOOSE DESIGN AND TEXT TO BE PRINTED ON T-SHIRT </p>
+        </div>
+        <div class="step"> <img src="image/p11.jpg" alt="Step 4">
+            <p style="background-color: #FFC300;">4. FINALIZE YOUR DESIGN AND PAY ONLINE</p>
+        </div>
+        <div class="step"> <img src="image/pp6.jpg" alt="Step 5">
+            <p style="background-color: #FF5733;">5. WAIT FOR YOUR CUSTOM T-SHIRT TO BE DELIVERED TO YOUR DOORSTEP </p>
+        </div>
+    </section>
+    <div class="about-us">
+        <section id="about-us">
+            <h2>About Us</h2>
+                <p>My name is Gaurav, and I am the project owner at Custom T-Shirt Design. We are dedicated to providing you with the highest quality personalized clothing. We understand how important it is for you to express yourself, and that's why I've made it my mission to help you do just that. Our custom design tool allows you to create unique t-shirts that truly represent who you are. I'm passionate about design and customer service, and I'm always here to assist you with any questions or concerns you might have. Thank you for choosing Custom T-Shirt Design!</p>
+        
+        <p>Project Owner: Gaurav Singh</p>
+        
+        <p>Email: <a href="mailto:officalgaurav10@gmail.com">officalgaurav10@gmail.com</a></p>
+        <p>Phone: +91 9949494949</p>
+        <p>Twitter: <a href="https://twitter.com/officalgaurav10">@officalgaurav10</a></p>
+    </section>
+    </div>
+</body>
+
+</html>

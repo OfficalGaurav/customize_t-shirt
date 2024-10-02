@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+</head>
+<body>
+    <button id="checkout-button">Checkout</button>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        // Replace with your Stripe publishable key
+        var stripe = Stripe('pk_test_51PslRf2LgGxWcqP7g1756oAiClsAygiKpwIYGDl6RhpqAwEVjrXHAm8e6sFq2M39OZZHY3sjSLSTDsMl4ZYumw1O00ZqCbmarR'); 
+
+        document.getElementById('checkout-button').addEventListener('click', function () {
+            fetch('payment.php', { // Adjust path if necessary
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                // Use the session ID returned from payment.php
+                return stripe.redirectToCheckout({ sessionId: data.id });
+            })
+            .then(function (result) {
+                if (result.error) {
+                    alert(result.error.message); // Show error message if redirect fails
+                }
+            })
+            .catch(function (error) {
+                console.error('Error:', error); // Log any errors that occur
+            });
+        });
+    </script>
+</body>
+</html>

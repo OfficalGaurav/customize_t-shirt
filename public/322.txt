@@ -1,0 +1,814 @@
+<head> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.1/fabric.min.js"></script>
+  <style>
+    body {
+      background: rgb(2,0,36);
+      background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(7,7,28,1) 35%, rgba(0,212,255,1) 100%);
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+   #title,#title1 {
+    font-size: 350%;
+    font-weight: bold;
+    transition: color 0.2s ease;
+    color: #ffff44;
+   }
+
+   #title:hover {
+    color: #ff1f1f; /* Change this to the color you want on hover */
+    animation: blinker 1s linear infinite;
+   }
+
+
+   #title1:hover {
+    color: #1fff44; /* Change this to the color you want on hover */
+    animation: blinker 1s linear infinite;
+   }
+
+   .summary-text p {
+    font-size: 20px;
+    font-weight: bold;
+    color:#ee9090;
+    transition: color 0.5s ease-in-out;
+   }
+
+   .summary-text p:hover {
+    color: #90EE90; /* change this to the color you want upon hover */
+   }
+   #about-us h2 { 
+    font-size: 350%;
+    font-weight: bold;
+    transition: color 0.2s ease;
+    color: #ee9090;
+}
+
+   #about-us h2:hover {
+    color: #ee9090; /* Change this to the color you want on hover */
+    animation: blinker 1s linear infinite;
+}
+   @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+   } 
+
+  </style>
+</head>
+<body> 
+    <h1 style="color:red;background-color:yellow;"><marquee><img src="image/p6.jpg" width="50" height="33" border=2><strong> Welcome to our Online Printed T-Shirt Designing Project Chad </strong></marquee></h1>  
+<h2 id="title">Select your Preferred Tshirt Neck Design</h2>
+<form id="imageForm">
+    <label>
+      <div>$1</div>
+      <img src="image/11white.png" width="200" height="150">
+      <input type="radio" name="image" value="image/11white.png" data-colorform="colorForm1">
+    </label> 
+    <label>
+      <img src="image/t11.jpg" width="200" height="150">
+      <input type="radio" name="image" value="image/t11.jpg" data-colorform="colorForm2">
+    </label> 
+     <label>
+      <img src="image/ta11.jpg" width="200" height="150">
+      <input type="radio" name="image" value="image/ta11.jpg" data-colorform="colorForm3">
+    </label>
+    <label>
+      <img src="image/tb11_white.png" width="200" height="150">
+      <input type="radio" name="image" value="image/tb11_white.png" data-colorform="colorForm4">
+    </label> 
+    <label>
+      <img src="image/tc11_white.jpg" width="200" height="150">
+      <input type="radio" name="image" value="image/tc11_white.jpg" data-colorform="colorForm5">
+    </label> 
+    <label>
+      <img src="image/td11_white.png" width="200" height="150">
+      <input type="radio" name="image" value="image/td11_white.png" data-colorform="colorForm6">
+    </label> 
+    <label>
+      <img src="image/te11_white.jpg" width="200" height="150">
+      <input type="radio" name="image" value="image/te11_white.jpg" data-colorform="colorForm7">
+    </label> 
+    <label>
+      <img src="image/tf11_white.jpg" width="200" height="150">
+      <input type="radio" name="image" value="image/tf11_white.jpg" data-colorform="colorForm8">
+    </label> 
+    <label>
+      <img src="image/tg11_white.jpg" width="200" height="150">
+      <input type="radio" name="image" value="image/tg11_white.jpg" data-colorform="colorForm9">
+    </label> 
+    <label>
+      <img src="image/th11_white.jpg" width="200" height="150">
+      <input type="radio" name="image" value="image/th11_white.jpg" data-colorform="colorForm10">
+    </label> 
+    <button type="submit" >Submit</button>
+  </form>
+<h2 id="title1">Select your Preferred Tshirt COLOR </h2>
+  <form id="colorForm1" class="colorForm" style="display:none;">
+    <label>
+      <img src="image/1.png" width="200" height="150">
+      <input type="radio" name="color" value="image/1.png">
+    </label>
+    <label>
+      <img src="image/2.png" width="200" height="150">
+      <input type="radio" name="color" value="image/2.png">
+    </label>
+    <label>
+      <img src="image/3.png" width="200" height="150">
+      <input type="radio" name="color" value="image/3.png">
+    </label>
+    <label>
+      <img src="image/4.png" width="200" height="150">
+      <input type="radio" name="color" value="image/4.png">
+    </label>
+    <label>
+      <img src="image/5.png" width="200" height="150">
+      <input type="radio" name="color" value="image/5.png">
+    </label>
+    <label>
+      <img src="image/6.png" width="200" height="150">
+      <input type="radio" name="color" value="image/6.png">
+    </label>
+    <label>
+      <img src="image/7.png" width="200" height="150">
+      <input type="radio" name="color" value="image/7.png">
+    </label>
+    <label>
+      <img src="image/8.png" width="200" height="150">
+      <input type="radio" name="color" value="image/8.png">
+    </label>
+    <label>
+      <img src="image/9.png" width="200" height="150">
+      <input type="radio" name="color" value="image/9.png">
+    </label>
+    <label>
+      <img src="image/10.png" width="200" height="150">
+      <input type="radio" name="color" value="image/10.png">
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+  
+  <form id="colorForm2" class="colorForm" style="display:none;">
+    <label>
+      <img src="image/t1.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t1.png">
+    </label>
+    <label>
+      <img src="image/t2.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t2.png">
+    </label>
+    <label>
+      <img src="image/t3.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t3.png">
+    </label>
+    <label>
+      <img src="image/t4.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t4.png">
+    </label>
+    <label>
+      <img src="image/t5.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t5.png">
+    </label>
+    <label>
+      <img src="image/t6.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t6.png">
+    </label>
+    <label>
+      <img src="image/t7.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t7.png">
+    </label>
+    <label>
+      <img src="image/t8.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t8.png">
+    </label>
+    <label>
+      <img src="image/t9.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t9.png">
+    </label>
+    <label>
+      <img src="image/t10.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t10.png">
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+
+  <form id="colorForm3" class="colorForm" style="display:none;">
+    <label>
+      <img src="image/ta1.png" width="200" height="150">
+      <input type="radio" name="color" value="image/ta1.png">
+    </label>
+    <label>
+      <img src="image/ta2.png" width="200" height="150">
+      <input type="radio" name="color" value="image/ta2.png">
+    </label>
+    <label>
+      <img src="image/ta3.png" width="200" height="150">
+      <input type="radio" name="color" value="image/ta3.png">
+    </label>
+    <label>
+      <img src="image/ta4.png" width="200" height="150">
+      <input type="radio" name="color" value="image/ta4.png">
+    </label>
+    <label>
+      <img src="image/ta5.png" width="200" height="150">
+      <input type="radio" name="color" value="image/ta5.png">
+    </label>
+    <label>
+      <img src="image/ta6.png" width="200" height="150">
+      <input type="radio" name="color" value="image/ta6.png">
+    </label>
+    <label>
+      <img src="image/ta7.png" width="200" height="150">
+      <input type="radio" name="color" value="image/ta7.png">
+    </label>
+    <label>
+      <img src="image/ta8.png" width="200" height="150">
+      <input type="radio" name="color" value="image/ta8.png">
+    </label>
+    <label>
+      <img src="image/ta9.png" width="200" height="150">
+      <input type="radio" name="color" value="image/ta9.png">
+    </label>
+    <label>
+      <img src="image/ta10.png" width="200" height="150">
+      <input type="radio" name="color" value="image/ta10.png">
+    </label>
+    <button type="submit" >Submit</button>
+  </form>
+
+  <form id="colorForm4" class="colorForm" style="display:none;">
+    <label>
+      <img src="image/tb1.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tb1.png">
+    </label>
+    <label>
+      <img src="image/tb2.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tb2.png">
+    </label>
+    <label>
+      <img src="image/tb3.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tb3.png">
+    </label>
+    <label>
+      <img src="image/tb4.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tb4.png">
+    </label>
+    <label>
+      <img src="image/tb5.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tb5.png">
+    </label>
+    <label>
+      <img src="image/tb6.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tb6.png">
+    </label>
+    <label>
+      <img src="image/tb7.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tb7.png">
+    </label>
+    <label>
+      <img src="image/tb8.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tb8.png">
+    </label>
+    <label>
+      <img src="image/tb9.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tb9.png">
+    </label>
+    <label>
+      <img src="image/tb10.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tb10.png">
+    </label> 
+  <button type="submit">Submit</button>
+  </form>
+
+    <form id="colorForm5" class="colorForm" style="display:none;">
+    <label>
+      <img src="image/tc1.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tc1.png">
+    </label>
+    <label>
+      <img src="image/tc2.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tc2.png">
+    </label>
+    <label>
+      <img src="image/tc3.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tc3.png">
+    </label>
+    <label>
+      <img src="image/tc4.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tc4.png">
+    </label>
+    <label>
+      <img src="image/t5.png" width="200" height="150">
+      <input type="radio" name="color" value="image/t5.png">
+    </label>
+    <label>
+      <img src="image/tc6.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tc6.png">
+    </label>
+    <label>
+      <img src="image/tc7.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tc7.png">
+    </label>
+    <label>
+      <img src="image/tc8.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tc8.png">
+    </label>
+    <label>
+      <img src="image/tc9.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tc9.png">
+    </label>
+    <label>
+      <img src="image/tc10.png" width="200" height="150">
+      <input type="radio" name="color" value="image/tc10.png">
+    </label>
+  <button type="submit">Submit</button>
+  </form>
+
+    <form id="colorForm6" class="colorForm" style="display:none;">
+    <label>
+      <img src="image/td1.png" width="200" height="150">
+      <input type="radio" name="color" value="image/td1.png">
+    </label>
+    <label>
+      <img src="image/td2.png" width="200" height="150">
+      <input type="radio" name="color" value="image/td2.png">
+    </label>
+    <label>
+      <img src="image/td3.png" width="200" height="150">
+      <input type="radio" name="color" value="image/td3.png">
+    </label>
+    <label>
+      <img src="image/td4.png" width="200" height="150">
+      <input type="radio" name="color" value="image/td4.png">
+    </label>
+    <label>
+      <img src="image/td5.png" width="200" height="150">
+      <input type="radio" name="color" value="image/td5.png">
+    </label>
+    <label>
+      <img src="image/td6.png" width="200" height="150">
+      <input type="radio" name="color" value="image/td6.png">
+    </label>
+    <label>
+      <img src="image/td7.png" width="200" height="150">
+      <input type="radio" name="color" value="image/td7.png">
+    </label>
+    <label>
+      <img src="image/td8.png" width="200" height="150">
+      <input type="radio" name="color" value="image/td8.png">
+    </label>
+    <label>
+      <img src="image/td9.png" width="200" height="150">
+      <input type="radio" name="color" value="image/td9.png">
+    </label>
+    <label>
+      <img src="image/td10.png" width="200" height="150">
+      <input type="radio" name="color" value="image/td10.png">
+    </label>
+  <button type="submit">Submit</button>
+  </form>
+
+    <form id="colorForm7" class="colorForm" style="display:none;">
+    <label>
+      <img src="image/te1.png" width="200" height="150">
+      <input type="radio" name="color" value="image/te1.png">
+    </label>
+    <label>
+      <img src="image/te2.png" width="200" height="150">
+      <input type="radio" name="color" value="image/te2.png">
+    </label>
+    <label>
+      <img src="image/te3.png" width="200" height="150">
+      <input type="radio" name="color" value="image/te3.png">
+    </label>
+    <label>
+      <img src="image/te4.png" width="200" height="150">
+      <input type="radio" name="color" value="image/te4.png">
+    </label>
+    <label>
+      <img src="image/te5.png" width="200" height="150">
+      <input type="radio" name="color" value="image/te5.png">
+    </label>
+    <label>
+      <img src="image/te6.png" width="200" height="150">
+      <input type="radio" name="color" value="image/te6.png">
+    </label>
+    <label>
+      <img src="image/te7.png" width="200" height="150">
+      <input type="radio" name="color" value="image/te7.png">
+    </label>
+    <label>
+      <img src="image/te8.png" width="200" height="150">
+      <input type="radio" name="color" value="image/te8.png">
+    </label>
+    <label>
+      <img src="image/te9.png" width="200" height="150">
+      <input type="radio" name="color" value="image/te9.png">
+    </label>
+    <label>
+      <img src="image/te10.png" width="200" height="150">
+      <input type="radio" name="color" value="image/te10.png">
+    </label>
+     <!-- Add more labels for color images 2 to 10 here -->
+    <button type="submit">Submit</button>
+  </form>
+
+  <form id="colorForm8" class="colorForm" style="display:none;">
+    <label>
+      <img src="image/tf1.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tf1.jpg">
+    </label>
+    <label>
+      <img src="image/tf2.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tf2.jpg">
+    </label>
+    <label>
+      <img src="image/tf3.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tf3.jpg">
+    </label>
+    <label>
+      <img src="image/tf4.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tf4.jpg">
+    </label>
+    <label>
+      <img src="image/tf5.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tf5.jpg">
+    </label>
+    <label>
+      <img src="image/tf6.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tf6.jpg">
+    </label>
+    <label>
+      <img src="image/tf7.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tf7.jpg">
+    </label>
+    <label>
+      <img src="image/tf8.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tf8.jpg">
+    </label>
+    <label>
+      <img src="image/tf9.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tf9.jpg">
+    </label>
+    <label>
+      <img src="image/tf10.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tf10.jpg">
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+
+  <form id="colorForm9" class="colorForm" style="display:none;">
+    <label>
+      <img src="image/tg1.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tg1.jpg">
+    </label>
+    <label>
+      <img src="image/tg2.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tg2.jpg">
+    </label>
+    <label>
+      <img src="image/tg3.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tg3.jpg">
+    </label>
+    <label>
+      <img src="image/tg4.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tg4.jpg">
+    </label>
+    <label>
+      <img src="image/tg5.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tg5.jpg">
+    </label>
+    <label>
+      <img src="image/tg6.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tg6.jpg">
+    </label>
+    <label>
+      <img src="image/tg7.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tg7.jpg">
+    </label>
+    <label>
+      <img src="image/tg8.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tg8.jpg">
+    </label>
+    <label>
+      <img src="image/tg9.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tg9.jpg">
+    </label>
+    <label>
+      <img src="image/tg10.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/tg10.jpg">
+    </label>
+ <button type="submit">Submit</button>
+  </form> 
+
+  <form id="colorForm10" class="colorForm" style="display:none;">
+    <label>
+      <img src="image/th1.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/th1.jpg">
+    </label>
+    <label>
+      <img src="image/th2.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/th2.jpg">
+    </label>
+    <label>
+      <img src="image/th3.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/th3.jpg">
+    </label>
+    <label>
+      <img src="image/th4.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/th4.jpg">
+    </label>
+    <label>
+      <img src="image/th5.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/th5.jpg">
+    </label>
+    <label>
+      <img src="image/th6.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/th6.jpg">
+    </label>
+    <label>
+      <img src="image/th7.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/th7.jpg">
+    </label>
+    <label>
+      <img src="image/th8.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/th8.jpg">
+    </label>
+    <label>
+      <img src="image/th9.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/th9.jpg">
+    </label>
+    <label>
+      <img src="image/th10.jpg" width="200" height="150">
+      <input type="radio" name="color" value="image/th10.jpg">
+    </label>
+    <button type="submit">Submit</button>
+  </form> 
+
+<div>
+    <input type="file" id="mediaInput" accept="image/*">
+    <button id="addMedia">Add Media</button>
+</div>
+<div>  
+<input type="color" id="shapeColor" value="#000000">
+<select id="shapeSelect">
+    <option value="none">--Select a shape--</option>
+    <option value="rectangle">Add Rectangle</option>
+    <option value="circle">Add Circle</option>
+    <option value="triangle">Add Triangle</option>
+</select>
+</div>
+
+<div>
+<button id="enableDrawing">Enable Drawing</button>
+<input type="color" id="brushColor" value="#000000">
+<button id="submitColor">Submit Color</button>
+</div>
+<div>
+    <select id="fontSelect">
+    <option value="Arial">Arial</option>
+    <option value="Helvetica">Helvetica</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Courier New">Courier New</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Impact">Impact</option>
+    <option value="Comic Sans MS">Comic Sans MS</option>
+    <option value="Trebuchet MS">Trebuchet MS</option>
+    <option value="Arial Black">Arial Black</option>
+    <option value="Palatino Linotype">Palatino Linotype</option>
+</select>
+
+</div>
+
+  <div>
+    <input type="text" id="text" placeholder="Enter your text here">
+    <input type="color" id="textColor" value="#000000">
+    <button id="addText">Add text</button>
+  </div>
+
+  <div>
+    <canvas id="bigBox" style="width:800px;height:600px;border:1px solid #000000;"></canvas>
+    <button id="submitDesign">Submit Design</button>
+  </div>
+<div id="summary" class="summary-text"></div>
+<form action="payment.php" method="POST">
+        <!-- Stripe Payment Button -->
+        <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_51BTUDGJAJfZb9HEBwDg86TN1KNprHjkfipXmEDMb0gSCassK5T3ZfxsAbcgKVmAIXF7oZ6ItlZZbXO6idTHE67IM007EwQ4uN3"
+            data-amount="999"
+            data-name="Custom T-Shirt Store"
+            data-description="Payment for Custom T-Shirt"
+            data-image="./111.jpg"
+            data-locale="auto"
+            data-currency="usd">
+        </script>
+    </form>
+
+
+<script>
+    var canvas = new fabric.Canvas('bigBox', { width: 800, height: 600 });
+
+    var selectedTshirtDesign = '';
+    var selectedTshirtColor = '';
+    var selectedShape = '';
+    var selectedDrawingColor = '';
+    var selectedText = '';
+    var selectedTextColor = '';
+
+
+
+    document.getElementById('imageForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var selectedImage = document.querySelector('input[name="image"]:checked');
+      var selectedImageUrl = selectedImage.value;
+      fabric.Image.fromURL(selectedImageUrl, function(img) {
+        img.scaleToWidth(canvas.width);
+        img.scaleToHeight(canvas.height);
+        canvas.clear();
+        canvas.add(img);
+      });
+
+      var associatedColorForm = selectedImage.getAttribute('data-colorform');
+      showColorForm(associatedColorForm);
+    });
+
+    var colorForms = document.getElementsByClassName('colorForm');
+    for (var i = 0; i < colorForms.length; i++) {
+      colorForms[i].addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var selectedColor = this.querySelector('input[name="color"]:checked').value;
+        fabric.Image.fromURL(selectedColor, function(img) {
+          img.scaleToWidth(canvas.width);
+          img.scaleToHeight(canvas.height);
+          canvas.clear();
+          canvas.add(img);
+
+          // Hide the color form
+          this.style.display = 'none';
+        }.bind(this));
+      });
+    }
+
+    function showColorForm(colorFormId) {
+      var colorForm = document.getElementById(colorFormId);
+      colorForm.style.display = 'block';
+    }
+
+    document.getElementById('shapeSelect').addEventListener('change', function(e) {
+        var shapeColor = document.getElementById('shapeColor').value;
+        var shape = this.value;
+
+        switch(shape) {
+            case 'rectangle':
+                var rect = new fabric.Rect({ left: 100, top: 100, fill: shapeColor, width: 200, height: 190 });
+                canvas.add(rect);
+                break;
+            case 'circle':
+                var circle = new fabric.Circle({ left: 200, top: 200, fill: shapeColor, radius:100});
+                canvas.add(circle);
+                break;
+            case 'triangle':
+                var triangle = new fabric.Triangle({ left: 300, top: 300, fill: shapeColor, width: 100, height: 100 });
+                canvas.add(triangle);
+                break;
+            default:
+                break;
+        }
+    });
+document.getElementById('addMedia').addEventListener('click', function() {
+    var mediaInput = document.getElementById('mediaInput');
+    var file = mediaInput.files[0];
+
+    if (file) {
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            var imageUrl = event.target.result;
+            
+            fabric.Image.fromURL(imageUrl, function(img) {
+                // Set the default size of the added image
+                img.scaleToWidth(150); // You can adjust this value as needed
+                img.scaleToHeight(150); // You can adjust this value as needed
+                canvas.add(img);
+            });
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+
+document.getElementById('enableDrawing').addEventListener('click', function(e) {
+      canvas.isDrawingMode = !canvas.isDrawingMode;
+      if (canvas.isDrawingMode){
+        canvas.freeDrawingBrush = new fabric.PencilBrush(canvas);
+      }
+    });
+
+ 
+      document.getElementById('submitColor').addEventListener('click', function(e) {
+      var brushColor = document.getElementById('brushColor').value;
+      if (canvas.isDrawingMode && canvas.freeDrawingBrush){
+        canvas.freeDrawingBrush.color = brushColor;
+      }
+    });
+document.getElementById('fontSelect').addEventListener('change', function() {
+    canvas.getActiveObject().set("fontFamily", this.value);
+    canvas.renderAll();
+});
+
+document.getElementById('addText').addEventListener('click', function(e) {
+    var userInput = document.getElementById('text').value;
+    var userColor = document.getElementById('textColor').value;
+
+    // Create a new fabric.IText object with the user's input and specified color
+    var text = new fabric.IText(userInput, { left: 100, top: 100, fill: userColor });
+    text.lockMovementX = false;
+    text.lockMovementY = false;
+
+    // Add the created text to the canvas and bring it to the front
+    canvas.add(text);
+    canvas.bringToFront(text);
+
+    // Optionally, you can select the newly added text
+    canvas.setActiveObject(text);
+});
+
+
+ <canvas id="designCanvas" width="600" height="400"></canvas>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const canvas = new fabric.Canvas('designCanvas');
+
+      document.getElementById('imageForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent traditional form submission
+
+        const selectedImageInput = document.querySelector('input[name="image"]:checked');
+        if (selectedImageInput) {
+          const imageUrl = selectedImageInput.value;
+          fabric.Image.fromURL(imageUrl, (img) => {
+            canvas.clear(); // Clear previous image
+            img.set({ left: 0, top: 0, scaleX: canvas.width / img.width, scaleY: canvas.height / img.height });
+            canvas.add(img);
+          });
+        }
+        
+        // Hide the image selection form and show the corresponding color form
+        document.getElementById('imageForm').style.display = 'none';
+        const colorFormId = selectedImageInput ? selectedImageInput.getAttribute('data-colorform') : '';
+        if (colorFormId) {
+          document.getElementById(colorFormId).style.display = 'block';
+        }
+      });
+
+      document.querySelectorAll('.colorForm').forEach(form => {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault(); // Prevent traditional form submission
+
+          const selectedColorInput = document.querySelector('input[name="color"]:checked');
+          if (selectedColorInput) {
+            const colorUrl = selectedColorInput.value;
+            fabric.Image.fromURL(colorUrl, (img) => {
+              canvas.getObjects().forEach(obj => {
+                if (obj instanceof fabric.Image) {
+                  obj.setSrc(colorUrl, () => {
+                    canvas.renderAll();
+                  });
+
+
+  document.getElementById('submitDesign').addEventListener('click', function(e) {
+  var summary = document.getElementById('summary');
+  summary.innerHTML = 
+  <p>Tshirt Design: ${selectedTshirtDesign}</p>
+  <p>Tshirt Color: ${selectedTshirtColor}</p>
+  <p>Shape: ${selectedShape}</p>
+  <p>Drawing Color: ${selectedDrawingColor}</p>
+  <p>Text: ${selectedText}</p>
+  <p>Text Color: ${selectedTextColor}</p>
+;
+    });
+
+
+</script>
+
+
+
+
+<div>
+  <section id="about-us">
+    <h2>About Us</h2>
+    <p>Our team at Custom T-Shirt Design is dedicated to providing you with the highest quality personalized clothing. We know how important it is for you to express yourself, and that's why we've made it our mission to help you do just that. Our custom design tool allows you to create unique t-shirts that truly represent who you are. We're passionate about design and customer service, and we're always here to assist you with any questions or concerns you might have. Thank you for choosing Custom T-Shirt Design!</p>
+    <p>Our Team Members: Gaurav Singh, Jaspal, Rajkumar, Paras</p>
+    <p>Email: <a href="mailto:officalgaurav10@gmail.com">officalgaurav10@gmail.com</a></p>
+    <p>Phone: 91 9876543210</p>
+    <p>Twitter: <a href="https://twitter.com/gaurav10">@gaurav10</a></p>
+  </section>
+</div>
+
+
+
+</body>
+</html>
